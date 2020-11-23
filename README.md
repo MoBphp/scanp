@@ -12,6 +12,6 @@ Fazer um scan  de portas de 1 ate 65535 portas em um servidor...
 | --- | --- |
 |```cd scanp```|Entrar na pasta|
 |```chmod 755 scanp```|Dar permissao ao script|
-| ```./scanp <ip>``` | Usar o Script|
+| ```./scanp <host>``` | Usar o Script|
 
 ![Text Alert](https://media.giphy.com/media/d2ZegRpJmRhe3EXK/giphy.gif)
