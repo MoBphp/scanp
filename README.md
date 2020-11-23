@@ -4,7 +4,7 @@
 [![Build Status](https://travis-ci.org/dwyl/esta.svg?branch=master)](https://travis-ci.org/dwyl/esta)
 
 ## Descriçao
-Fazer combinaçoes de nomes e numeros para descobrir senhas...
+Fazer um scan  de portas de 1 ate 65535 portas em um servidor...
 
 
 ## Help
