@@ -3,7 +3,7 @@
 ![versions](https://img.shields.io/pypi/pyversions/pybadges.svg)
 [![Build Status](https://travis-ci.org/dwyl/esta.svg?branch=master)](https://travis-ci.org/dwyl/esta)
 
-## Descriçao
+## Description
 Fazer um scan  de portas de 1 ate 65535 portas em um servidor...
 
 
