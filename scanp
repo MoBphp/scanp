@@ -40,9 +40,9 @@ def scan():
            #print(f"[!]Port {port}........[Closed]" )
     t2 = datetime.now()
     total = t2 - t1
-    print("-" * 60)
+    print("\033[33m-\033[0;0m" * 60)
     print("Scanning Completed in:", total)
-    print("-" * 60)
+    print("\033[31m-\033[0;0m" * 60)
     s.close()
 try:
   if len(sys.argv) >= 2:
