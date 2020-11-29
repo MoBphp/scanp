@@ -4,7 +4,8 @@
 ## Versions 
 
 | Command | Description |
-| scanp |  Doing a basic scan of port 1 to 1000 can take ...|
+| --- | --- | 
+| scanp | Doing a basic scan of port 1 to 1000 can take ...|
 | scanp2 |more recommended makes a scan of port 1 to 65535 less time consuming to bring all the doors filtered, closed and open ... |
 
 ![versions](https://img.shields.io/pypi/pyversions/pybadges.svg)
