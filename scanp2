@@ -5,6 +5,7 @@ except ImportError:
   print("[+] Error in lib")
 
 def banner():
+  os.system('clear')
   print('''\033[31m
  ██████╗ ██████╗ ██████╗  █████╗ ██╗
 \033[32m██╔═══██╗██╔══██╗██╔══██╗██╔══██╗██║
