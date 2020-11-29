@@ -1,10 +1,11 @@
 #!/usr/bin/python3
 try:
-  import nmap, sys
+  import nmap, sys, os
 except ImportError:
   print("[+] Error in lib")
 
 def banner():
+  os.system('clear')
   print('''\033[31m
  ██████╗ ██████╗ ██████╗  █████╗ ██╗
 \033[32m██╔═══██╗██╔══██╗██╔══██╗██╔══██╗██║
