@@ -22,4 +22,4 @@ made in python and two updated versions
 |```chmod 755 scanp or chmod 755 scanp2```|Give permission to the script|
 | ```./scanp <host>``` | Usage Script|
 |```./scanp2 <target>```|Usage in now version| 
-![Text Alert](https://media.giphy.com/media/d2ZegRpJmRhe3EXK/giphy.gif)
+![Text Alert](https://media.giphy.com/media/d2ZegRpJmRhe3EXK/giphy.gif)| oppai?
