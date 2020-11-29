@@ -20,8 +20,8 @@ def banner():
   print("\033[33m-\033[0;0m" * 60)
   print(f'\033[32m[*]\033[0;0m Scanning {ip} :: {host} ')
   print("\033[33m-\033[0;0m" * 60)
-  host = sys.argv[1]
-  ip = socket.gethostbyname(host)
+host = sys.argv[1]
+ip = socket.gethostbyname(host)
 def scan():
   t1 = datetime.now()
   #variaveis...
