@@ -11,14 +11,15 @@
 [![Build Status](https://travis-ci.org/dwyl/esta.svg?branch=master)](https://travis-ci.org/dwyl/esta)
 
 ## Description
-Fazer um scan  de portas de 1 ate 65535 portas em um servidor...
+Scan ports on a server
+made in python and two updated versions
 
 
 ## Help
 | Command | Description |
 | --- | --- |
-|```cd scanp```|Entrar na pasta|
-|```chmod 755 scanp or chmod 755 scanp2```|Dar permissao ao script|
-| ```./scanp <host>``` | Usar o Script|
-|```./scanp2 <target>```|Usar a nova versao| 
+|```cd scanp```|Enter folder|
+|```chmod 755 scanp or chmod 755 scanp2```|Give permission to the script|
+| ```./scanp <host>``` | Usage Script|
+|```./scanp2 <target>```|Usage in now version| 
 ![Text Alert](https://media.giphy.com/media/d2ZegRpJmRhe3EXK/giphy.gif)
