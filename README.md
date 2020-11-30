@@ -19,6 +19,7 @@ made in python and two updated versions
 | Command | Description |
 | --- | --- |
 |```cd scanp```|Enter folder|
+| ```pip3 installl -r requirements ```|lib|
 |```chmod 755 scanp or chmod 755 scanp2```|Give permission to the script|
 | ```scanp -s <host>``` | Usage script in basic|
 | ```scanp -p <host> ```| Usage script in complete |  
