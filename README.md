@@ -22,7 +22,6 @@ made in python now updated version
 | ```cd scanp```|Enter folder|
 | ```chmod 755 install```| Permission in install|
 | ```./install```| Install in script|
-| ```pip3 install -r requirements ```|lib|
 | ```scanp -s <host>``` | Usage script in basic|
 | ```scanp -p <host> ```| Usage script in complete |  
 ![Text Alert](https://media.giphy.com/media/d2ZegRpJmRhe3EXK/giphy.gif)| oppai?
