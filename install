@@ -4,7 +4,7 @@ if [ "$(whoami)" = "root" ];
 then
   chmod 755 scanp;
   echo "[*] installing...";
-  $('pip3 install -r requirements.txt')
+  $(pip3 install -r requirements.txt)
   mv ./scanp /usr/local/bin/scanp;
   echo "[*] installed!!";
 else
