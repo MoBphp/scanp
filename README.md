@@ -1,11 +1,12 @@
 # scanp 🌐
 
 
-## Versions 
+## Comandos
 
 | scan | Description |
 | --- | --- | 
-| scanp |more recommended makes a scan of port 1 to 65535 less time consuming to bring all the doors filtered, closed and open ... |
+| scanp -p | More recommended makes a scan of port 1 to 65535 less time consuming to bring all the doors filtered, closed and open ... |
+| scanp -s | Do a basic port scan on a fast scan server from 1 to 1000|
 
 ![versions](https://img.shields.io/pypi/pyversions/pybadges.svg)
 [![Build Status](https://travis-ci.org/dwyl/esta.svg?branch=master)](https://travis-ci.org/dwyl/esta)
