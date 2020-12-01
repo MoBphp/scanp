@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [ -a scanp ];
+then
+  chmod 755 scanp;
+  echo "[*] installing...";
+  $("mv ./scanp /usr/local/bin/");
+  echo "[*] installed!!"
+else:
+  echo "[!] Error and install...";
+fi
