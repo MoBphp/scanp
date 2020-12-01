@@ -19,8 +19,9 @@ made in python and two updated versions
 | Command | Description |
 | --- | --- |
 |```cd scanp```|Enter folder|
+|```chmod 755 install```| Permission in install|
+|```./install``| Install in script|
 | ```pip3 install -r requirements ```|lib|
-|```chmod 755 scanp or chmod 755 scanp2```|Give permission to the script|
 | ```scanp -s <host>``` | Usage script in basic|
 | ```scanp -p <host> ```| Usage script in complete |  
 ![Text Alert](https://media.giphy.com/media/d2ZegRpJmRhe3EXK/giphy.gif)| oppai?
