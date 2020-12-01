@@ -12,7 +12,7 @@
 
 ## Description
 Scan ports on a server
-made in python and two updated versions
+made in python and nos updated version
 
 
 ## Help
