@@ -4,8 +4,11 @@ if [ -a scanp ];
 then
   chmod 755 scanp;
   echo "[*] installing...";
-  $("mv ./scanp /usr/local/bin/");
+  mv ./scanp /usr/local/bin/scanp;
   echo "[*] installed!!"
-else:
+else
   echo "[!] Error and install...";
 fi
+
+
+
