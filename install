@@ -4,6 +4,7 @@ if [ "$(whoami)" = "root" ];
 then
   chmod 755 scanp;
   echo "[*] installing...";
+  apt-get install nmap
   $(pip3 install -r requirements.txt)
   mv ./scanp /usr/local/bin/scanp;
   echo "[*] installed!!";
