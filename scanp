@@ -36,22 +36,19 @@ def scan():
       host = sys.argv[2]
       ip = socket.gethostbyname(host)
       t1 = datetime.now()
-      print("\033[33m-\033[0;0m" * 60)
-      print(f'\033[32m[*]\033[0;0m Scanning {ip} :: {host}')
       scanp = nmap.PortScanner()
+      print("\033[33m-\033[0;0m" * 60)
+      print(f'\033[32m[*]\033[0;0m Scanning {ip} :: {scanp[host].hostname()}')
       scanp.scan(host , '1-1000')  
       for host in scanp.all_hosts():
-        print(f'\033[32m[*]\033[0;0m State :: {scanp[host].state()}' )    
-    
+        print(f'\033[32m[*]\033[0;0m State :: {scanp[host].state()} ' )    
         for proto in scanp[ip].all_protocols():
           print(f'\033[32m[*]\033[0;0m Protocol :: {proto}')
           print("\033[33m-\033[0;0m" * 60)
-      
           phost = scanp[ip][proto].keys()
-          
-          print('Port             State')
+          print('[Port]         [State]         [Service]        [Version] \n')
           for port in phost:
-            print(f'{port}              {scanp[host][proto][port]["state"]}')
+            print(f'  {port}           {scanp[host][proto][port]["state"]}            {scanp[host][proto][port]["name"]}             {scanp[host][proto][port]["version"]}')
       t2 = datetime.now()
       total = t2 - t1
       print("\033[32m-\033[0;0m" * 60)
@@ -73,11 +70,10 @@ def scan():
         for proto in scanp[ip].all_protocols():
           print(f'\033[32m[*]\033[0;0m Protocol :: {proto}')
           print("\033[33m-\033[0;0m" * 60)
-      
           phost = scanp[ip][proto].keys()
-          print('Port             State')
+          print('[Port]         [State]         [Service]        [Version] \n')
           for port in phost:
-            print(f'{port}              {scanp[host][proto][port]["state"]}')
+            print(f'  {port}           {scanp[host][proto][port]["state"]}            {scanp[host][proto][port]["name"]}             {scanp[host][proto][port]["version"]}')
       t2 = datetime.now()
       total = t2 - t1
       print("\033[32m-\033[0;0m" * 60)
