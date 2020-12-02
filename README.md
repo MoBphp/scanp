@@ -1,5 +1,5 @@
 # Scanp 🌐
-! [Alerta de texto] ( https://media.giphy.com/media/IItUiJxQfZbsAi92IS/giphy.gif )
+![Alerta de texto]( https://media.giphy.com/media/IItUiJxQfZbsAi92IS/giphy.gif )
 
 ## Comandos
 
