@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+
+# Lib usage in script scanp
 try:
   from optparse import OptionParser
   import nmap, sys, os
@@ -7,6 +9,7 @@ try:
 except ImportError:
   print("\033[41m[!]\033[0;0m Error in lib")
 
+# Banner in script
 def banner():
   os.system('clear')
   print('''\033[31m
@@ -26,64 +29,95 @@ def banner():
 
   ''')
 
+# Scanp 
 def scan():
+  # Arguments 
   parser = OptionParser()
   parser.add_option('-s', help='(Doing a basic scan of ports from 1 to 1000 takes a few seconds to complete)', action='store_true')
   parser.add_option('-p', help='(Do a complete scan of all ports from 1 to 65535, it may take a few minutes to complete)')
   option, args = parser.parse_args()
+  
+  # Execute in argument -s
   if option.s:
-    if len(sys.argv) >= 3:
-      host = sys.argv[2]
-      ip = socket.gethostbyname(host)
-      t1 = datetime.now()
-      scanp = nmap.PortScanner()
+    if len(sys.argv) >= 3: # Read arguments
+      #Variables main
+      host = sys.argv[2] # Argument sys
+      ip = socket.gethostbyname(host) # Take ip in host
+      t1 = datetime.now() # Run time script
+      scanp = nmap.PortScanner() # nmap.PortScanner for scanp
+      
+      # Print ip and domain
       print("\033[33m-\033[0;0m" * 60)
-      print(f'\033[32m[*]\033[0;0m Scanning {ip} :: {host}')
-      scanp.scan(host , '1-1000')  
-      for host in scanp.all_hosts():
-        print(f'\033[32m[*]\033[0;0m State :: {scanp[host].state()} ' )    
-        for proto in scanp[ip].all_protocols():
-          print(f'\033[32m[*]\033[0;0m Protocol :: {proto}')
+      print(f'\033[32m[*]\033[0;0m Scanning {ip} :: {host}') # Print ip and host
+      
+       # Do scan in ports
+      scanp.scan(host , '1-1000')  # ports 1 and 1000
+      for host in scanp.all_hosts(): # Get all hosts that were scanned
+        print(f'\033[32m[*]\033[0;0m State :: {scanp[host].state()} ' ) # Print state in host
+        
+        for proto in scanp[ip].all_protocols(): # Show all protocols
+          print(f'\033[32m[*]\033[0;0m Protocol :: {proto}') # Print protocol
           print("\033[33m-\033[0;0m" * 60)
-          phost = scanp[ip][proto].keys()
+          phost = scanp[ip][proto].keys() #keys port and protocol
+          
+          # Show port, protocol, state, versions and services, Do scanner in host, protocol, port for state, services, versions
           print('[Port]         [State]         [Service]        [Version] \n')
           for port in phost:
+                      # Print port       # Do scan in state                                    # Do scan in service                                 # Do scan in version      
             print(f'  {port}           {scanp[host][proto][port]["state"]}            {scanp[host][proto][port]["name"]}             {scanp[host][proto][port]["version"]}')
-      t2 = datetime.now()
-      total = t2 - t1
+      
+      # minutes to run the script
+      t2 = datetime.now() # Stop time in script
+      total = t2 - t1 # tell time in script
       print("\033[32m-\033[0;0m" * 60)
-      print("Scanning Completed in:", total)
+      print("Scanning Completed in:", total)# Print minutes
       print("\033[31m-\033[0;0m" * 60)
     else:
       print('\033[41m[!]\033[0;0m Arguments are missing !!')
+
+  # Executar in argument -p
   if option.p:
-      host = sys.argv[2]
-      ip = socket.gethostbyname(host)
-      t1 = datetime.now()
-      print("\033[33m-\033[0;0m" * 60)
-      print(f'\033[32m[*]\033[0;0m Scanning Complete in  {ip} :: {host}')
-      scanp = nmap.PortScanner()
-      scanp.scan(host , '1-65535')  
-      for host in scanp.all_hosts():
-        print(f'\033[32m[*]\033[0;0m State :: {scanp[host].state()}' )    
+      
+      #Variables main
+      host = sys.argv[2] # Argument sys
+      ip = socket.gethostbyname(host) # Take ip in host
+      t1 = datetime.now() # Run time script
+      scanp = nmap.PortScanner() # nmap.PortScanner for scanp
     
-        for proto in scanp[ip].all_protocols():
-          print(f'\033[32m[*]\033[0;0m Protocol :: {proto}')
+      # Print ip and domain
+      print("\033[33m-\033[0;0m" * 60)
+      print(f'\033[32m[*]\033[0;0m Scanning Complete in  {ip} :: {host}') # Print ip and host
+      # Do scan in ports
+      scanp.scan(host , '1-65535') # ports 1 and 65535
+      for host in scanp.all_hosts():# Get all hosts that were scanned
+        print(f'\033[32m[*]\033[0;0m State :: {scanp[host].state()}' ) # Print state in host
+    
+        for proto in scanp[ip].all_protocols():# Show all protocols
+          print(f'\033[32m[*]\033[0;0m Protocol :: {proto}')# Print protocol
           print("\033[33m-\033[0;0m" * 60)
-          phost = scanp[ip][proto].keys()
+          phost = scanp[ip][proto].keys() #keys port and protocol  
+          
+          # Show port, protocol, state, versions and services, Do scanner in host, protocol, port for state, services, versions
           print('[Port]         [State]         [Service]        [Version] \n')
           for port in phost:
+                       # Print port       # Do scan in state                                    # Do scan in service                                 # Do scan in version      
             print(f'  {port}           {scanp[host][proto][port]["state"]}            {scanp[host][proto][port]["name"]}             {scanp[host][proto][port]["version"]}')
-      t2 = datetime.now()
-      total = t2 - t1
+                       
+      # minutes to run the script
+      t2 = datetime.now() # Stop time in script
+      total = t2 - t1 # tell time in script
       print("\033[32m-\033[0;0m" * 60)
-      print("Scanning Completed in:", total)
+      print("Scanning Completed in:", total)# Print minutes
       print("\033[31m-\033[0;0m" * 60)
+  
+  #imformation more script
   else:
     print('\n')
     print("\033[32m+\033[0;0m" * 60,)
     print('\033[32m[+]\033[0;0m  Execute scanp -h for more information') 
     print("\033[32m+\033[0;0m" * 60)
+
+#System for read script
 try:
   banner()
   scan()
